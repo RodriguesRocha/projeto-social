@@ -43,9 +43,21 @@ iframe#tela {
     height: 471px;
 }
 
+section#redes-sociais {
+    text-align: right; /* Gambiarra para o "menu" ficar na direita */
+}
+
 section#redes-sociais img {
     width: 50px;
     margin: 10px;
     border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.37);
+    box-sizing: border-box; /* com essa configuração a borda faz parte do elemento, daí não vai forçar os outros elementos a irem para baixo ao passar o mouse em cima */
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid #ffffff8a;
+    transform: translate(-3px, -3px); /* com o transform eu consigo mudar a posição dos elementos, nesse caso vai para a esquerda e para cima */
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.452);
+    transition: transform 0.3s; /* transição para o elemento transform de 0.3s */
 }
